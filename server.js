@@ -32,7 +32,10 @@ app.post('/pay', async (req, res) => {
     });
     res.json(response.data);
   } catch (err) {
-    res.status(500).json({ error: err.toString(), details: err.response?.data });
+    res.status(500).json({ 
+      error: err.toString(), 
+      details: err.response ? err.response.data : null 
+});
   }
 });
 
