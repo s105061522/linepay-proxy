@@ -69,7 +69,7 @@ app.post('/confirm', async (req, res) => {
 });
 
 app.get('/', (req, res) => {
-  res.send('LINE Pay Proxy Server is running ✅');
+  res.send('LINE Pay Proxy Server is running ✅ !');
 });
 
 const port = process.env.PORT || 3000;
