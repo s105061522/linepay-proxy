@@ -16,6 +16,7 @@ function makeSignature(uri, body, nonce) {
 
 app.post('/pay', async (req, res) => {
   const body = req.body;
+  console.log("收到前端送來的資料：", body);
   const uri = '/v3/payments/request';
   const nonce = Date.now().toString();
   const jsonBody = JSON.stringify(body);
