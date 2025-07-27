@@ -9,7 +9,7 @@ app.use(express.json());
 
 const CHANNEL_ID = process.env.CHANNEL_ID;
 const CHANNEL_SECRET = process.env.CHANNEL_SECRET;
-const BASE_URL = 'https://sandbox-api-pay.line.me';
+const BASE_URL = 'https://api-pay.line.me';
 
 function makeSignature(uri, body, nonce) {
   const text = CHANNEL_SECRET + uri + body + nonce;
