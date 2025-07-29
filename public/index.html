@@ -12,7 +12,7 @@
   <script>
     async function pay() {
       try {
-        const res = await fetch('http://38.60.212.76:3000/pay', {
+        const res = await fetch('/pay', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
@@ -39,7 +39,7 @@
         });
 
         const data = await res.json();
-        console.log("LINE Pay Response:", data);
+        console.log("LINE Pay 回應：", data);
 
         if (data.info && data.info.paymentUrl && data.info.paymentUrl.web) {
           window.location.href = data.info.paymentUrl.web;
