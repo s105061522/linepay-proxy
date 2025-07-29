@@ -6,8 +6,10 @@ const cors = require('cors');
 const axios = require('axios');
 const crypto = require('crypto');
 const app = express();
+const path = require('path');
 app.use(cors());
 app.use(express.json());
+app.use(express.static(path.join(__dirname, 'public')));
 
 const CHANNEL_ID = process.env.CHANNEL_ID;
 const CHANNEL_SECRET = process.env.CHANNEL_SECRET;
